@@ -25,13 +25,13 @@
     <div class="pcards">
       <article class="pcard reveal">
         <div class="pcard-top">
-          <div><span class="ctx">Personal Project</span><span class="cat">RAG · Hybrid Search · LLM</span></div>
+          <div><span class="ctx">Personal Project</span><span class="cat">RAG · Generative AI</span></div>
           <span class="badge done">Complete</span>
         </div>
         <h3>LectureLens</h3>
         <p>Ask questions across hours of YouTube lectures and get grounded answers with clickable timestamp citations that jump to the exact moment in the video.</p>
-        <ul class="tri"><li>Retrieval-augmented generation: transcripts from YouTube links or SRT / VTT captions are split into 30-second overlapping chunks, embedded with Gemini and stored in ChromaDB.</li><li>Hybrid retrieval fuses vector search and BM25 keyword search with Reciprocal Rank Fusion: 83% Hit@1 and 0.90 MRR on 24 labelled questions, vs 71% Hit@1 for semantic search alone.</li><li>Strict grounding prompt refused 6/6 out-of-scope questions; follow-up questions are rewritten into standalone queries; an embedded player jumps to each cited moment.</li><li>78 offline pytest tests run on GitHub Actions CI, with typed settings and retries for transient API errors.</li></ul>
-        <div class="pcard-bottom"><div class="chips"><span class="chip">Python</span><span class="chip">LangChain</span><span class="chip">ChromaDB</span><span class="chip">Google Gemini</span><span class="chip">BM25</span><span class="chip">Streamlit</span><span class="chip">pytest</span></div><div class="pcard-links"><a href="https://github.com/bhukyajashwanthi/lecturelens" target="_blank" rel="noopener">View on GitHub →</a></div></div>
+        <ul class="tri"><li>Lecture transcripts are split into short time-based pieces and stored in a ChromaDB vector database.</li><li>Combines keyword search and meaning-based search to find the most relevant parts of a lecture, then Google Gemini answers using only those parts.</li><li>Each answer shows a clickable timestamp, and questions the lectures don't cover are politely refused.</li><li>Tested on a set of sample questions; the code includes automated tests.</li></ul>
+        <div class="pcard-bottom"><div class="chips"><span class="chip">Python</span><span class="chip">LangChain</span><span class="chip">ChromaDB</span><span class="chip">Google Gemini</span><span class="chip">Streamlit</span></div><div class="pcard-links"><a href="https://github.com/bhukyajashwanthi/lecturelens" target="_blank" rel="noopener">View on GitHub →</a></div></div>
       </article>
       <article class="pcard reveal">
         <div class="pcard-top">
